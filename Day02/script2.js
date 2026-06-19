@@ -1,5 +1,3 @@
-// Nested Object
-
 const userSession = {
     username: "Abdeali",
     isAuthenticated: true,
@@ -10,16 +8,13 @@ const userSession = {
     }
 };
 
-// Arrow Function
 
 const checkAccess = (userSession) => {
 
-    // Authentication Check
     if (userSession.isAuthenticated == false) {
         return "Access Denied: Please log in first";
     }
 
-    // Role Verification
     else if (userSession.profile.role == "Admin") {
         return "Access Granted: Full administrative privileges.";
     }
@@ -40,7 +35,6 @@ const checkAccess = (userSession) => {
     }
 };
 
-// Display Result
 
 function checkUser() {
     document.getElementById("result").innerHTML =
